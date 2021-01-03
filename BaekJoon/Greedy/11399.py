@@ -1,4 +1,4 @@
-#11399 - 그리디
+#11399 - 그리디, ATM
 
 # N = int(input())
 # P = [int(i) for i in input().split(" ")]
