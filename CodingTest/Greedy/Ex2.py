@@ -6,8 +6,8 @@
 
 S = input()
 result = int(S[0])
-for i in range(1,len(S)):
-    if S[i-1] != '0' and S[i] != '0':
+for i in range(1, len(S)):
+    if result > 1 and int(S[i]) > 1:
         result *= int(S[i])
     else:
         result += int(S[i])
