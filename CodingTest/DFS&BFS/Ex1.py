@@ -10,15 +10,13 @@ def DFS(graph, nx, ny, visited):
     if graph[nx][ny] == 0 and not visited[nx][ny]:
         visited[nx][ny] = True
         for i in range(4):
-            nx += dx[i]
-            ny += dy[i]
-            DFS(graph, nx, ny, visited)
+            DFS(graph, nx+dx[i], ny+dy[i], visited)
         return True
     return False
 
 N, M = map(int, input().split())
 graph = []
-visited = [[False] * M] * N
+visited = [[False for _ in range(M)]for _ in range(N)]
 cnt = 0
 for i in range(N):
     graph.append(list(map(int, input())))
