@@ -12,7 +12,7 @@ N, M = map(int, input().split())
 tteok = list(map(int, input().split()))
 start = 0
 end = max(tteok)
-
+result = 0
 while start <= end:
     mid = (start + end) // 2
     length = 0
