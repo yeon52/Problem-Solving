@@ -1,3 +1,4 @@
+#크루스칼
 import sys
 input = sys.stdin.readline
 

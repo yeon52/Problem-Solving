@@ -1,3 +1,5 @@
+#크루스칼
+
 import sys
 
 def find_parent(parent, n):
