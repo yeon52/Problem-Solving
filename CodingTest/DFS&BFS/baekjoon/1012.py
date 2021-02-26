@@ -24,7 +24,7 @@ def bfs(graph, x, y):
                 graph[nx][ny] = 0
                 q.append((nx,ny))
 
-    return False
+    return True
 
 T = int(input())
 result = []
