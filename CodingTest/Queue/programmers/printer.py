@@ -3,9 +3,11 @@ from collections import deque
 
 
 def solution(priorities, location):
-    q = deque()
-    for i in range(len(priorities)):
-        q.append((priorities[i], i))
+    #q = deque()
+    # for i in range(len(priorities)):
+    #    q.append((priorities[i], i))
+    q = deque([(p, l) for l, p in enumerate(priorities)])
+    # 인덱스를 함께 다루고 싶을 땐 enumerate!
     print_ = 0
 
     while q:
