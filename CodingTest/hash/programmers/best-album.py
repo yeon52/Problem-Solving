@@ -1,6 +1,7 @@
+# 베스트 앨범, 해쉬(딕셔너리)
 def solution(genres, plays):
     answer = []
-    dic = {}
+    dic = {}  # 합
     dic2 = {}
     for genre in genres:
         dic[genre] = 0
@@ -8,13 +9,16 @@ def solution(genres, plays):
 
     for genre, play in zip(genres, plays):
         dic[genre] += play
-
     for i, (genre, play) in enumerate(zip(genres, plays)):
         dic2[genre].append((play, i))
 
-    dic = sorted(dic.items(), reverse=True)
-    dic2 = sorted(dic2.items(), key=lambda x: x[1][0], reverse=True)
-    print(dic2)
-    # for key in dic:
+    for genre in genres:
+        dic2[genre] = sorted(
+            dic2[genre], key=lambda x: (x[0], -x[1]), reverse=True)
+    dic = dict(sorted(dic.items(), key=lambda x: x[1], reverse=True))
+
+    for key in dic:
+        for play, i in dic2[key][:2]:
+            answer.append(i)
 
     return answer
