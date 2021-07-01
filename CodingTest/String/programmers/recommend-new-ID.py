@@ -1,7 +1,5 @@
 # 신규 아이디 추천, 문자열, 2021 kakao blind recruitment
 def solution(new_id):
-    answer = ''
-
     # 1
     new_id = new_id.lower()
 
