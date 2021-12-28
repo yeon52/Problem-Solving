@@ -10,6 +10,7 @@ def dijkstra(start):
     distance[start] = 0
     while h:
         c,n = heapq.heappop(h)
+        if c > distance[n]:continue
         for i in bus[n]:
             dis = c+i[1]
             if distance[i[0]] > dis:
